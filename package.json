@@ -5,12 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:https": "vite --https",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "start:https": "concurrently \"npm run dev:https\" \"cd server && npm run dev\""
+    "preview": "vite preview"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
