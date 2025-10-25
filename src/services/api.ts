@@ -1,15 +1,14 @@
 // Get the current hostname to determine if we're running locally or on network
 const getApiBaseUrl = () => {
   const hostname = window.location.hostname;
-  const port = '5000';
   
   // If running on localhost, use localhost
   if (hostname === 'localhost' || hostname === '127.0.0.1') {
-    return `https://localhost:${port}/api`;
+    return 'https://localhost:5000/api';
   }
   
-  // If running on network, use the current hostname
-  return `https://${hostname}:${port}/api`;
+  // For production/deployed frontend, use the Vercel backend
+  return 'https://c-be.vercel.app/api';
 };
 
 const API_BASE_URL = getApiBaseUrl();
